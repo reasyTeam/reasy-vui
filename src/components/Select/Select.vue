@@ -40,12 +40,12 @@ export default {
     },
 
     value: {
-      type: [Number, String],
+      type: [String, Number, Boolean],
       required: true
     },
 
     label: {
-      type: String,
+      type: [String, Number],
       default: ""
     },
     border: {

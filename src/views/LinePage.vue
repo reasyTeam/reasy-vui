@@ -5,8 +5,8 @@
       <vui-line class="line" direction="left">左边框</vui-line>
       <vui-line class="line" direction="right">右边框</vui-line>
       <vui-line class="line" direction="bottom">下边框</vui-line>
-      <vui-line class="line" direction="bottom" type="red">红边框</vui-line>
-      <vui-line class="line" direction="bottom" type="red"></vui-line>
+      <vui-line class="line" direction="bottom" type="error">红边框</vui-line>
+      <vui-line class="line" direction="bottom" type="link"></vui-line>
     </div>
   </vui-page>
 </template>

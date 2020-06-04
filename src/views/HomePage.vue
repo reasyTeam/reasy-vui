@@ -51,7 +51,7 @@ export default {
         {
           title: "布局组件",
           list: [
-            { title: "Collapse", text: "手风琴", path: "/collapse" },
+            { title: "Collapse", text: "折叠面板", path: "/collapse" },
             { title: "Scroll", text: "滚动容器", path: "/scroll" },
             // { title: "Header", text: "导航页头", path: "/button" },
             { title: "List", text: "列表", path: "/list" },

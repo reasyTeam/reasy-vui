@@ -1,12 +1,21 @@
 <template>
   <transition name="vui-dialog-fade">
-    <div :class="['vui-dialog-wrapper', { 'vui-message': !hasContent }]" v-show="visible" @click="popClose">
+    <div
+      :class="['vui-dialog-wrapper', { 'vui-message': !hasContent }]"
+      v-show="visible"
+      @click="popClose"
+    >
       <div class="vui-dialog" :class="[css]" @click.stop>
         <div class="vui-dialog-header">
           <div class="vui-dialog-title" v-if="title">
             <span>{{ title }}</span>
           </div>
-          <button v-show="showClose" type="button" @click="hide" class="vui-dialog-close">
+          <button
+            v-show="showClose"
+            type="button"
+            @click="hide"
+            class="vui-dialog-close"
+          >
             <i class="vui-icon-close"></i>
           </button>
         </div>
@@ -17,7 +26,16 @@
           </slot>
         </div>
         <div class="vui-dialog-footer">
-          <vui-button @click="item.callback" v-for="item in vuiButtons" :key="item.title" plain :border="false" :type="item.type" class="vui-dialog-btn">{{ item.title }} </vui-button>
+          <vui-button
+            @click="item.callback"
+            v-for="item in vuiButtons"
+            :key="item.title"
+            plain
+            :border="false"
+            :type="item.type"
+            class="vui-dialog-btn"
+            >{{ item.title }}
+          </vui-button>
         </div>
       </div>
     </div>
@@ -42,7 +60,7 @@ export default {
     buttons: {
       type: [Array, Object],
       default() {
-        return [{ title: "确定", type: "theme" }];
+        return [{ title: "确定", type: "primary" }];
       }
     },
     closeOnClickModal: {
@@ -68,7 +86,7 @@ export default {
   },
   model: {
     prop: "visible",
-    event: "change"
+    event: "input"
   },
 
   beforeMount() {
@@ -165,7 +183,11 @@ export default {
         this._closing = false;
       }
 
-      PopupManager.openModal(this._popupId, PopupManager.nextZIndex(), this.modalAppendToBody ? undefined : dom);
+      PopupManager.openModal(
+        this._popupId,
+        PopupManager.nextZIndex(),
+        this.modalAppendToBody ? undefined : dom
+      );
 
       if (getComputedStyle(dom).position === "static") {
         dom.style.position = "absolute";
@@ -219,7 +241,7 @@ export default {
       }
     },
     hide() {
-      this.$emit("change", false);
+      this.$emit("input", false);
     },
     popClose() {
       if (this.closeOnClickModal) {

@@ -67,7 +67,7 @@ export default {
       }
     },
     label: {
-      type: String,
+      type: [String, Number],
       required: false
     }
   },

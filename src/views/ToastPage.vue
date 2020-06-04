@@ -2,12 +2,12 @@
   <vui-page title="Message 消息提醒">
     <div class="demo-title">基础用法</div>
     <div class="button-row">
-      <vui-button type="theme" @click="loading">loading</vui-button>
-      <vui-button type="theme" @click="toast">toast</vui-button>
-      <vui-button type="theme" @click="success">success</vui-button>
-      <vui-button type="theme" @click="warning">warning</vui-button>
-      <vui-button type="theme" @click="error">error</vui-button>
-      <vui-button type="theme" @click="toast1">很长的toast</vui-button>
+      <vui-button type="primary" @click="loading">loading</vui-button>
+      <vui-button type="primary" @click="toast">toast</vui-button>
+      <vui-button type="primary" @click="success">success</vui-button>
+      <vui-button type="primary" @click="warning">warning</vui-button>
+      <vui-button type="primary" @click="error">error</vui-button>
+      <vui-button type="primary" @click="toast1">很长的toast</vui-button>
     </div>
     <div class="demo-title">属性配置</div>
     <div class="demo-row">
@@ -30,7 +30,9 @@
       ></vui-range>
     </div>
     <div class="button-row">
-      <vui-button block type="theme" @click="showPop">点击显示提醒</vui-button>
+      <vui-button block type="primary" @click="showPop"
+        >点击显示提醒</vui-button
+      >
     </div>
   </vui-page>
 </template>
@@ -52,13 +54,13 @@ export default {
       this.$success({ message: "success", duration: 6000 });
     },
     toast() {
-      this.$toast("toast");
+      this.$toast("你问风，为什么托着候鸟飞翔!");
     },
     toast1() {
       this.$toast("这条信息这么长，有没有看到，是不是很长，哈哈哈！");
     },
     error() {
-      this.$error("error");
+      this.$error("输入有误，请重新输入！");
     },
     showPop() {
       if (this.message === "") {
@@ -66,7 +68,7 @@ export default {
         return;
       }
 
-      this.$toast({
+      this.$message({
         type: this.type,
         message: this.message,
         duration: this.duration

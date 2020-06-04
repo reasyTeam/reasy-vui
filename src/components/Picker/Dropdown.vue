@@ -22,7 +22,7 @@ export default {
   name: "vui-dropdown",
   props: {
     label: {
-      type: String,
+      type: [String, Number],
       default: ""
     },
     disabled: {

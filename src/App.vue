@@ -33,7 +33,7 @@
 .button-row {
   padding-right: 12px;
   .button {
-    margin: 6px;
+    margin: 6px !important;
   }
 }
 </style>

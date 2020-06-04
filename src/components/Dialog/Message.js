@@ -16,7 +16,7 @@ export default function Message(option) {
       isCommand: true
     }
   });
-  instance.$on("change", val => {
+  instance.$on("input", val => {
     instance.visible = val;
   });
   instance.$mount();
@@ -33,7 +33,7 @@ Message.alert = function(title, btnText = "确定") {
       buttons: [
         {
           title: btnText,
-          type: "theme",
+          type: "primary",
           callback() {
             resolve(instance);
           }
@@ -59,7 +59,7 @@ Message.confirm = function(title, message) {
         },
         {
           title: "确定",
-          type: "theme",
+          type: "primary",
           callback() {
             resolve(instance);
           }

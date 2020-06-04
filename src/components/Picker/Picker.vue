@@ -67,7 +67,7 @@ export default {
   name: "vui-picker",
   props: {
     label: {
-      type: String,
+      type: [String, Number],
       default: ""
     },
     disabled: {

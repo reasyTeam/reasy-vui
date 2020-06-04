@@ -1,8 +1,8 @@
 import Vue from "vue";
-import Loading from "./Loading.vue";
+import VuiToast from "./Toast.vue";
 import PopupManager from "../lib/maskManager";
 
-let LoadingConstructor = Vue.extend(Loading);
+let LoadingConstructor = Vue.extend(VuiToast);
 
 const Toast = function(options) {
   options = options || {};
@@ -41,6 +41,17 @@ const Toast = function(options) {
 });
 
 Toast["toast"] = options => {
+  if (typeof options !== "object" || options === undefined) {
+    options = {
+      message: options === undefined ? "" : options + ""
+    };
+  }
+  options.type = "toast";
+
+  return Toast(options);
+};
+
+Toast["message"] = options => {
   if (typeof options !== "object" || options === undefined) {
     options = {
       message: options === undefined ? "" : options + "",

@@ -47,12 +47,12 @@ export default {
     },
 
     value: {
-      type: String,
+      type: [String, Number, Boolean],
       required: true
     },
 
     label: {
-      type: String,
+      type: [String, Number],
       default: ""
     },
     disabled: {

@@ -10,9 +10,9 @@ import VuiCheckbox from "./Checkbox/Checkbox.vue";
 import VuiSelect from "./Select/Select.vue";
 import VuiSwitch from "./Switch/Switch.vue";
 import VuiRange from "./Range/Range.vue";
-import VuiMessage from "./Loading/index";
+import VuiToast from "./Toast/index";
 import VuiDialog from "./Dialog/Dialog.vue";
-import Message from "./Dialog/Message";
+import Dialog from "./Dialog/Message";
 import VuiCollapse from "./Collapse/Collapse";
 import VuiTransition from "./lib/collapse-transition";
 import VuiTab from "./Tab/Tab.vue";
@@ -50,14 +50,15 @@ export default function install(Vue) {
   Vue.component("vui-dropdown", VuiDropdown);
   Vue.component("vui-text", VuiText);
 
-  Vue.prototype.$loading = VuiMessage.loading;
-  Vue.prototype.$toast = VuiMessage.toast;
-  Vue.prototype.$success = VuiMessage.success;
-  Vue.prototype.$warning = VuiMessage.warning;
-  Vue.prototype.$error = VuiMessage.error;
-  // Vue.prototype.$message = VuiMessage;
-  Vue.prototype.$alert = Message.alert;
-  Vue.prototype.$confirm = Message.confirm;
+  Vue.prototype.$loading = VuiToast.loading;
+  Vue.prototype.$toast = VuiToast.toast;
+  Vue.prototype.$success = VuiToast.success;
+  Vue.prototype.$warning = VuiToast.warning;
+  Vue.prototype.$error = VuiToast.error;
+  Vue.prototype.$message = VuiToast.message;
+
+  Vue.prototype.$alert = Dialog.alert;
+  Vue.prototype.$confirm = Dialog.confirm;
 
   // 一些兼容性代码
   /* for iOS 10, users can now pinch-to-zoom even when a website sets user-scalable=no in the viewport. */
