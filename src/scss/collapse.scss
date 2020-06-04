@@ -1,0 +1,40 @@
+.vui-collapse {
+  .vui-collapse-head {
+    display: flex;
+    align-items: center;
+    padding: 0 $padding;
+    height: $form-row-height;
+  }
+  .vui-coolapse-title {
+    flex: 1;
+    color: $color-form-label;
+    font-size: $font-form-size;
+  }
+
+  .vui-icon-up {
+    margin-right: $padding;
+    font-size: 14px;
+    color: #ccc;
+    transition: transform $ios-transition-duration $ios-transition-timing-function;
+  }
+  .vui-collapse-content {
+    // transform: translate3d(-1px, 0, 0);
+    padding: $padding;
+    font-size: $font-form-size;
+    line-height: 24px;
+    color: #595959;
+  }
+
+  &.is-active {
+    .vui-icon-up {
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+  }
+
+  &.disabled {
+    .vui-collapse-content,
+    .vui-coolapse-title {
+      color: $color-form-disabled;
+    }
+  }
+}

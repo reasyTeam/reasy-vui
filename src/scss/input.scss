@@ -1,0 +1,46 @@
+$line-height: 24px;
+
+.vui-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .vui-input-content {
+    display: flex;
+    align-items: center;
+  }
+  .vui-input {
+    height: 100%;
+    position: relative;
+    font-size: $font-form-size;
+    color: $color-form-value;
+    line-height: $line-height;
+    border: 0;
+    outline: none;
+    width: 50%;
+    flex: 1;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  .vui-input-icons {
+    width: 22px;
+    text-align: right;
+    color: #ccc;
+
+    &.double {
+      width: 44px;
+    }
+
+    .input-icon {
+      font-size: 18px;
+      margin-left: 4px;
+    }
+  }
+
+  &.no-title {
+    .vui-form-value {
+      width: 100%;
+    }
+  }
+}

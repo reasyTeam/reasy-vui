@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?3zxcet');
+  src:  url('fonts/icomoon.eot?3zxcet#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3zxcet') format('truetype'),
+    url('fonts/icomoon.woff?3zxcet') format('woff'),
+    url('fonts/icomoon.svg?3zxcet#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="vui-icon-"], [class*=" vui-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vui-icon-down:before {
+  content: "\e907";
+}
+.vui-icon-up:before {
+  content: "\e90b";
+}
+.vui-icon-menu:before {
+  content: "\e906";
+}
+.vui-icon-add:before {
+  content: "\e901";
+}
+.vui-icon-add-circle:before {
+  content: "\e902";
+}
+.vui-icon-left:before {
+  content: "\e903";
+}
+.vui-icon-eye-close:before {
+  content: "\e904";
+}
+.vui-icon-eye-open:before {
+  content: "\e905";
+}
+.vui-icon-close:before {
+  content: "\e908";
+}
+.vui-icon-delete:before {
+  content: "\e909";
+}
+.vui-icon-success:before {
+  content: "\e90a";
+}
+.vui-icon-right:before {
+  content: "\e911";
+}
+.vui-icon-error-circle:before {
+  content: "\e914";
+}
+.vui-icon-notice:before {
+  content: "\e924";
+}
+.vui-icon-wifi:before {
+  content: "\e929";
+}
+.vui-icon-check:before {
+  content: "\e900";
+}

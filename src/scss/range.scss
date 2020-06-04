@@ -1,0 +1,74 @@
+$range-R: 22px;
+.vui-range {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 1;
+
+  & > * {
+    display: flex;
+    display: -webkit-box;
+  }
+
+  & *[slot="start"] {
+    margin-right: 5px;
+  }
+
+  & *[slot="end"] {
+    margin-left: 5px;
+  }
+
+  .vui-range-content {
+    position: relative;
+    flex: 1;
+    margin-right: $padding;
+  }
+
+  .vui-range-runway {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -$padding;
+    border-top-color: #ddd;
+    border-top-style: solid;
+  }
+
+  .vui-range-thumb {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: $range-R;
+    height: $range-R;
+    border-radius: 50%;
+    transform: translate3d(0, -50%, 0);
+    cursor: move;
+    border: 1px solid $color-theme;
+  }
+
+  .vui-range-progress {
+    position: absolute;
+    display: block;
+    background-color: $color-theme;
+    top: 0;
+    width: 0;
+  }
+
+  .vui-range-max {
+    padding-left: 6px;
+  }
+
+  .vui-range-min {
+    padding-right: 6px;
+  }
+}
+
+.disabled {
+  .vui-range-thumb {
+    border-color: $color-theme-disabled;
+  }
+  .vui-range-progress {
+    background-color: $color-theme-disabled;
+  }
+}

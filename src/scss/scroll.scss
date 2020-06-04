@@ -1,0 +1,11 @@
+.vui-scroll {
+  overflow: hidden;
+
+  &.scrollX {
+    white-space: nowrap;
+
+    .vui-scroll-content {
+      display: inline-block;
+    }
+  }
+}
