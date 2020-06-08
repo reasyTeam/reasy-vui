@@ -95,6 +95,9 @@ export default {
   },
 
   beforeDestroy() {
+    if (this.modalAppendToBody) {
+      this.$el.remove();
+    }
     PopupManager.deregister(this._popupId);
     PopupManager.closeModal(this._popupId);
   },
@@ -247,6 +250,11 @@ export default {
       if (this.closeOnClickModal) {
         this.hide();
       }
+    }
+  },
+  mounted() {
+    if (this.modalAppendToBody) {
+      document.body.append(this.$el);
     }
   }
 };

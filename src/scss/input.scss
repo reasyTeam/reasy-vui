@@ -28,13 +28,21 @@ $line-height: 24px;
     text-align: right;
     color: #ccc;
 
+    position: absolute;
+    right: $padding - 2px;
+    top: 0;
+    height: 100%;
+
     &.double {
       width: 44px;
     }
 
     .input-icon {
       font-size: 18px;
-      margin-left: 4px;
+      padding: 0 2px;
+      height: 100%;
+      line-height: $form-row-height;
+      display: inline-block;
     }
   }
 

@@ -123,3 +123,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* 用于去除点击链接和输入框等的高亮显示 */
+* {
+  -webkit-tap-highlight-color: none;
+  -webkit-appearance: none;
+}

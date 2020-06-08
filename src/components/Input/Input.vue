@@ -19,7 +19,7 @@
           @blur="blur"
           :disabled="disabled"
         />
-
+        <label></label>
         <label class="vui-input-icons" :style="styleObj">
           <i
             v-show="showClearButton"
