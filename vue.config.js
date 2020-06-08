@@ -12,7 +12,7 @@ module.exports = {
       title: "reasy-vui"
     }
   },
-  outputDir: "doc",
+  outputDir: "docs",
   css: {
     loaderOptions: {
       scss: {
