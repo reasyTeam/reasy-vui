@@ -140,7 +140,7 @@ export default {
   },
   mounted() {
     this.getText();
-    this.$root.$el.append(this.$refs.popPage.$el);
+    this.$root.$el.appendChild(this.$refs.popPage.$el);
   },
   beforeDestroy() {
     if (this.popvm) {

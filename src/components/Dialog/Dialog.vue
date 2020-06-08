@@ -254,7 +254,7 @@ export default {
   },
   mounted() {
     if (this.modalAppendToBody) {
-      document.body.append(this.$el);
+      document.body.appendChild(this.$el);
     }
   }
 };
