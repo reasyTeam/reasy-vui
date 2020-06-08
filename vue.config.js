@@ -13,6 +13,7 @@ module.exports = {
     }
   },
   outputDir: "docs",
+  publicPath: "./",
   css: {
     loaderOptions: {
       scss: {
