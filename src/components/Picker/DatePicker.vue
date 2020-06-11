@@ -63,7 +63,7 @@ import Wheel from "@better-scroll/wheel";
 BScroll.use(Wheel);
 
 export default {
-  name: "vui-picker",
+  name: "vui-date-picker",
   props: {
     label: {
       type: String,

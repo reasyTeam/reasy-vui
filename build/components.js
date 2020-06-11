@@ -14,6 +14,7 @@ module.exports = {
 
   tab: "./src/components/Tab/index.js",
   scroll: "./src/components/Scroll/index.js",
+  transition: "./src/components/Transition/index.js",
   collapse: "./src/components/Collapse/index.js",
   dialog: "./src/components/Dialog/index.js",
   message: "./src/components/Dialog/Message.js",

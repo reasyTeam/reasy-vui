@@ -14,8 +14,10 @@ module.exports = {
 
   tab: "./src/scss/tab.scss",
   scroll: "./src/scss/scroll.scss",
+  transition: "./src/scss/transition.scss",
   collapse: "./src/scss/collapse.scss",
   dialog: "./src/scss/dialog.scss",
+  message: "./src/scss/message.scss",
   toast: "./src/scss/toast.scss",
 
   base: "./src/scss/base.scss"

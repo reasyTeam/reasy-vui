@@ -1,4 +1,4 @@
-import { addClass, removeClass } from "./utils";
+import { addClass, removeClass } from "../lib/utils";
 
 let transitionOn = {
   beforeEnter(el) {

@@ -1,7 +1,51 @@
 # reasy-vui
 
 移动端 UI 组件库。
-在线示例：https://reasyteam.github.io/reasy-vui/
+[在线示例](#https://reasyteam.github.io/reasy-vui/)
+
+
+## 使用
+
+### 安装
+```
+npm i @reasy-team/reasy-vui -S
+
+```
+
+### 完全引用
+```
+import ReasyVui from '@reasy-team/reasy-vui';
+
+Vue.use(ReasyVui);
+```
+
+### 按需引用
+
+1. 安装 [babel-plugin-component](#https://www.npmjs.com/package/babel-plugin-component) 插件
+2. `.babelrc`配置
+```js
+plugins: [
+  [
+    "component",
+    {
+      libraryName: "@reasy-team/reasy-vui", //插件名称
+      styleLibraryName: "css", //插件样式目录
+      libDir: "dist/lib" //插件库路径
+    }
+  ]
+]
+```
+3. `import`需要使用的组件
+```js
+import { Base, Datepicker, Input } from "@reasy-team/reasy-vui";
+
+Vue.use(Base);
+Vue.use(Datepicker);
+Vue.use(Input);
+```
+> 其中`Base`为组件基础支撑项，必须引入项，否则组件会不生效。
+
+
 
 # 组件列表
 
@@ -22,6 +66,7 @@
 - [vui-tab 导航按钮组](#vui-tab)
 - [toast 消息提示](#toast消息提示)
 - [Dialog 弹出框](#Dialog)
+
 
 # API
 
@@ -56,6 +101,12 @@
 | default | 显示内容，替换显示`value`的值 |
 
 > 优先级：`slot` > `value` > `placeholder`
+
+### 按需引入
+```js
+import { Text } from "@reasy-team/reasy-vui";
+Vue.use(Text);
+```
 
 
 
@@ -146,6 +197,12 @@
 | -------- | -------- | ---------------------------------------------------- |
 | click    | 点击事件 | 未提供参数，默认传(event: Event)，否则传递提供的参数 |
 
+### 按需引入
+```js
+import { Button } from "@reasy-team/reasy-vui";
+Vue.use(Button);
+```
+
 
 
 ## vui-line
@@ -173,6 +230,13 @@
 | name    | 说明         |
 | ------- | ------------ |
 | default | 线条内的内容 |
+
+### 按需引入
+
+```js
+import { Line } from "@reasy-team/reasy-vui";
+Vue.use(Line);
+```
 
 
 
@@ -210,6 +274,13 @@
 | blur     | 失去焦点时触发         | value |
 | clear    | 点击清空时触发         | value |
 | change   | 失去焦点且值改变时触发 | value |
+
+### 按需引入
+
+```js
+import { Input } from "@reasy-team/reasy-vui";
+Vue.use(Input);
+```
 
 
 
@@ -265,6 +336,13 @@ export default {
 | 事件名称 | 说明         | 参数    |
 | -------- | ------------ | ------- |
 | change   | 值改变时触发 | `value` |
+
+### 按需引入
+
+```js
+import { Radio } from "@reasy-team/reasy-vui";
+Vue.use(Radio);
+```
 
 
 
@@ -328,6 +406,13 @@ export default {
 | -------- | ------------ | ------- |
 | change   | 值改变时触发 | `value` |
 
+### 按需引入
+
+```js
+import { Checkbox } from "@reasy-team/reasy-vui";
+Vue.use(Checkbox);
+```
+
 
 
 ## vui-select
@@ -386,6 +471,13 @@ export default {
 | -------- | ------------ | ------- |
 | change   | 值改变时触发 | `value` |
 
+### 按需引入
+
+```js
+import { Select } from "@reasy-team/reasy-vui";
+Vue.use(Select);
+```
+
 
 
 ## vui-switch
@@ -416,6 +508,13 @@ export default {
 | 事件名称 | 说明         | 参数    |
 | -------- | ------------ | ------- |
 | change   | 值改变时触发 | `value` |
+
+### 按需引入
+
+```js
+import { Switch } from "@reasy-team/reasy-vui";
+Vue.use(Switch);
+```
 
 
 
@@ -450,6 +549,13 @@ export default {
 | 事件名称 | 说明         | 参数    |
 | -------- | ------------ | ------- |
 | change   | 值改变时触发 | `value` |
+
+### 按需引入
+
+```js
+import { Range } from "@reasy-team/reasy-vui";
+Vue.use(Range);
+```
 
 
 
@@ -494,6 +600,16 @@ export default {
 | 事件名称 | 说明             | 参数    |
 | -------- | ---------------- | ------- |
 | change   | 展开或收起时触发 | `value` |
+
+### 按需引入
+
+`vui-collapse`默认依赖`vui-collapse-transition`组件，需要同时引入`vui-collapse-transition`组件。
+
+```js
+import {Transition, Collapse } from "@reasy-team/reasy-vui";
+Vue.use(Transition);
+Vue.use(Collapse);
+```
 
 
 
@@ -559,6 +675,16 @@ export default {
 | cancel   | 点击取消时触发 | [待确认] |
 | confirm  | 点击确认时触发 | [待确认] |
 
+### 按需引入
+
+`vui-dropdown`组件继承自`vui-picker`，需要同时引入`vui-picker`组件。
+
+```js
+import { Picker, Dropdown } from "@reasy-team/reasy-vui";
+Vue.use(Picker);
+Vue.use(Dropdown);
+```
+
 
 
 ## vui-date-picker
@@ -607,6 +733,13 @@ export default {
 | -------- | -------------- | -------- |
 | cancel   | 点击取消时触发 | [待确认] |
 | confirm  | 点击确认时触发 | [待确认] |
+
+### 按需引入
+
+```js
+import { Datepicker } from "@reasy-team/reasy-vui";
+Vue.use(Datepicker);
+```
 
 
 
@@ -715,6 +848,15 @@ export default {
 | cancel   | 点击取消时触发 | [待确认] |
 | confirm  | 点击确认时触发 | [待确认] |
 
+### 按需引入
+
+```js
+import { Picker } from "@reasy-team/reasy-vui";
+Vue.use(Picker);
+```
+
+
+
 ## vui-scroll
 
 ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置。
@@ -754,7 +896,12 @@ ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置�
 | ------- | -------- |
 | default | 容器内容 |
 
-### 
+### 按需引入
+
+```js
+import { Scroll } from "@reasy-team/reasy-vui";
+Vue.use(Scroll);
+```
 
 
 
@@ -767,8 +914,6 @@ ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置�
 ```vue
 <vui-tab :buttons="buttons" v-model="value2"></vui-tab>
 ```
-
-
 
 ### Attributes
 
@@ -793,9 +938,16 @@ ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置�
 | -------- | -------------------- | ------- |
 | change   | 激活按钮项改变时触发 | `value` |
 
+### 按需引入
+
+```js
+import { Tab } from "@reasy-team/reasy-vui";
+Vue.use(Tab);
+```
 
 
-## Message 消息提示
+
+## Toast消息提示
 
 ###  基础用法
 
@@ -832,8 +984,6 @@ this.$message({
 });
 ```
 
-
-
 ### Attributes
 
 | 参数     | 说明                                                 | 类型     | 可选值                                  | 默认值 |
@@ -843,8 +993,6 @@ this.$message({
 | icon     | 消息图标类                                           | string   | -                                       | -      |
 | message  | 消息内容                                             | string   | -                                       | -      |
 | onClose  | 消息关闭后的回调                                     | function | -                                       | -      |
-
-### 
 
 ### Methods
 
@@ -957,6 +1105,19 @@ setTimeout(() => {
 
 `Message `消息体的配置信息，配置项见上表`Attributes`。其中配置的`type`字段会被忽略。
 
+### 按需引入
+
+```js
+import { Toast } from "@reasy-team/reasy-vui";
+Vue.use(Toast);
+Vue.prototype.$loading = Toast.loading;
+Vue.prototype.$toast = Toast.toast;
+Vue.prototype.$success = Toast.success;
+Vue.prototype.$warning = Toast.warning;
+Vue.prototype.$error = Toast.error;
+Vue.prototype.$message = Toast.message;
+```
+
 
 
 ## Dialog
@@ -1045,7 +1206,19 @@ this.$confirm("确定要删除嘛？")
 | -------- | ----------------------------------------------- |
 | default  | 内容区域，不提供可以通过设置`message`也是一样的 |
 
-**以下是封装的几种快速调用的接口：**
+### 按需引入
+
+`vui-dialog`中的按钮使用的是`vui-button`组件，故需同时引入。
+
+```js
+import { Button, Dialog } from "@reasy-team/reasy-vui";
+Vue.use(Button);
+Vue.use(Dialog);
+```
+
+
+
+以下是封装的几种快速调用的接口：**
 
 ### $alert(title, [buttonText])
 
@@ -1098,3 +1271,16 @@ confirm对话内容，可以是html代码段。非必填。
 #### 返回值
 
 返回一个`Promise`实例，点击确定切换到`resolve`，点击取消切换到`reject`。
+
+### 按需引入
+
+`message`中的按钮使用的是`vui-button`组件，故需同时引入。
+
+```js
+import { Button, Message } from "@reasy-team/reasy-vui";
+Vue.use(Button);
+Vue.use(Message);
+Vue.prototype.$alert = Message.alert;
+Vue.prototype.$confirm = Message.confirm;
+```
+

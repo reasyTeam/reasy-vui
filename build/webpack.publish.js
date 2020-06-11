@@ -1,6 +1,7 @@
 const path = require("path");
 const root = path.resolve(__dirname, ".."); // 项目的根目录绝对路径
 const { VueLoaderPlugin } = require("vue-loader");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -112,6 +113,7 @@ module.exports = {
       filename: "styles.css?[contenthash:5]",
       chunkFilename: "[id].css"
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new UglifyJsPlugin()
   ]
 };

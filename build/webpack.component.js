@@ -1,7 +1,7 @@
 const path = require("path");
 const root = path.resolve(__dirname, ".."); // 项目的根目录绝对路径
 const { VueLoaderPlugin } = require("vue-loader");
-
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const config = require("./components.js");
 
 module.exports = {
@@ -55,5 +55,5 @@ module.exports = {
     minimize: false
   },
   devtool: false,
-  plugins: [new VueLoaderPlugin()]
+  plugins: [new VueLoaderPlugin(), new UglifyJsPlugin()]
 };
