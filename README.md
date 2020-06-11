@@ -1,7 +1,6 @@
 # reasy-vui
 
-移动端 UI 组件库。
-[在线示例](#https://reasyteam.github.io/reasy-vui/)
+移动端 UI 组件库。[在线示例](https://reasyteam.github.io/reasy-vui/)
 
 
 ## 使用
@@ -21,7 +20,7 @@ Vue.use(ReasyVui);
 
 ### 按需引用
 
-1. 安装 [babel-plugin-component](#https://www.npmjs.com/package/babel-plugin-component) 插件
+1. 安装 [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) 插件
 2. `.babelrc`配置
 ```js
 plugins: [
