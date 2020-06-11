@@ -1,8 +1,7 @@
-import Vue from "vue";
 import VuiToast from "./Toast.vue";
 import PopupManager from "../lib/maskManager";
 
-let LoadingConstructor = Vue.extend(VuiToast);
+let LoadingConstructor;
 
 const Toast = function(options) {
   options = options || {};
@@ -60,6 +59,10 @@ Toast["message"] = options => {
   }
 
   return Toast(options);
+};
+
+Toast.install = function(Vue) {
+  LoadingConstructor = Vue.extend(VuiToast);
 };
 
 export default Toast;

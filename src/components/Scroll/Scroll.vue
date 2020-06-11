@@ -9,6 +9,7 @@
 import BScroll from "@better-scroll/core";
 
 export default {
+  name: "vui-scroll",
   props: {
     height: {
       type: String,

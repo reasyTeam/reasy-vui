@@ -23,6 +23,7 @@ const DEFAULT_BACK_TEXT = '<i class="icon vui-icon-left"></i>';
 const DEFAULT_MENU_TEXT = '<i class="icon vui-icon-menu"></i>';
 
 export default {
+  name: "vui-head",
   props: {
     // 标题
     title: String,

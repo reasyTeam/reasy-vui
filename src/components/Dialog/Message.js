@@ -1,6 +1,5 @@
-import Vue from "vue";
 import Dialog from "./Dialog.vue";
-const MessageConstructor = Vue.extend(Dialog);
+let MessageConstructor;
 
 export default function Message(option) {
   if (typeof option === "string") {
@@ -73,4 +72,8 @@ Message.message = function(title) {
   return Message({
     title
   });
+};
+
+Message.install = function(Vue) {
+  MessageConstructor = Vue.extend(Dialog);
 };

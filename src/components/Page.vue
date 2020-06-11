@@ -1,16 +1,7 @@
 <template>
   <div vui-page class="vui-page-wrapper vui-main-page">
     <div class="vui-page vui-page-body" :style="style">
-      <vui-head
-        v-if="hasTitle"
-        :title="title"
-        :showBack="showBack"
-        :backText="backText"
-        :onBack="onBack"
-        :showMenu="showMenu"
-        :menuText="menuText"
-        :onMenu="onMenu"
-      ></vui-head>
+      <vui-head v-if="hasTitle" :title="title" :showBack="showBack" :backText="backText" :onBack="onBack" :showMenu="showMenu" :menuText="menuText" :onMenu="onMenu"></vui-head>
       <slot></slot>
     </div>
   </div>
@@ -23,6 +14,7 @@ const nextDirection = (el, direction) => {
 };
 
 export default {
+  name: "vui-page",
   props: {
     hasTitle: {
       default: true

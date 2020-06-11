@@ -1,11 +1,5 @@
 <template>
-  <section
-    class="vui-collapse"
-    :class="[
-      `border-${border}`,
-      { 'is-active': isActive, disabled: isDisabled }
-    ]"
-  >
+  <section class="vui-collapse" :class="[`border-${border}`, { 'is-active': isActive, disabled: isDisabled }]">
     <div class="vui-collapse-head border-bottom" @click="change">
       <div class="vui-coolapse-title ellipsis">
         <slot name="title">
@@ -28,6 +22,7 @@
 
 <script>
 export default {
+  name: "vui-collapse",
   props: {
     active: {
       type: Boolean,

@@ -184,7 +184,6 @@
 
 ```vue
 <vui-input placeholder="文本框" v-model="value"></vui-input>
-
 <vui-input label="密码框" placeholder="密码框" type="password" v-model="password"></vui-input>
 ```
 
@@ -222,10 +221,8 @@
 
 ```vue
 <template>
-	<vui-radio label="性别" v-model="sex" :options="options">
-    </vui-radio>
-	<vui-radio label="性别" v-model="sex" :options="options1">
-    </vui-radio>
+  <vui-radio label="性别" v-model="sex" :options="options"></vui-radio>
+	<vui-radio label="性别" v-model="sex" :options="options1"></vui-radio>
 </template>
 
 <script>
@@ -279,10 +276,8 @@ export default {
 
 ```vue
 <template>
-	<vui-checkbox label="星期" v-model="day" :options="options">
-    </vui-checkbox>
-	<vui-checkbox label="星期" v-model="day" :options="weekday">
-    </vui-checkbox>
+	<vui-checkbox label="星期" v-model="day" :options="options"></vui-checkbox>
+	<vui-checkbox label="星期" v-model="day" :options="weekday"></vui-checkbox>
 </template>
 
 <script>
@@ -343,8 +338,7 @@ export default {
 
 ```vue
 <template>
-	<vui-select label="星期" v-model="day" :options="options">
-    </vui-select>
+	<vui-select label="星期" v-model="day" :options="options"></vui-select>
 	<vui-select label="星期" v-model="day" :options="weekday">
     </vui-select>
 </template>
@@ -511,10 +505,10 @@ export default {
 
 ```vue
 <template>
-	<div>
-        <vui-dropdown label="选框一(非Object)" v-model="value" :options="array"></vui-dropdown>
-      <vui-dropdown label="选框二(Object)" v-model="value" :options="arrayObject"></vui-dropdown>
-    </div>
+  <div>
+    <vui-dropdown label="选框一(非Object)" v-model="value" :options="array"></vui-dropdown>
+    <vui-dropdown label="选框二(Object)" v-model="value" :options="arrayObject"></vui-dropdown>
+  </div>
 </template>
 
 <script>
@@ -574,8 +568,10 @@ export default {
 ### 基础用法
 
 ```vue
-<vui-date-picker label="今天" v-model="today"></vui-date-picker>
-<vui-date-picker label="2020年6月1日" v-model="value"></vui-date-picker>
+<template>
+  <vui-date-picker label="今天" v-model="today"></vui-date-picker>
+  <vui-date-picker label="2020年6月1日" v-model="value"></vui-date-picker>
+</template>
 
 <script>
 export default {
@@ -624,8 +620,7 @@ export default {
 
 ```vue
 <template>
-	<vui-picker label="多列选框" v-model="value" :options="array">
-    </vui-picker>
+  <vui-picker label="多列选框" v-model="value" :options="array"></vui-picker>
 </template>
 
 <script>
@@ -645,8 +640,7 @@ export default {
 
 ```vue
 <template>
-	<vui-picker label="地址选择器" v-model="value" :options="array">
-    </vui-picker>
+  <vui-picker label="地址选择器" v-model="value" :options="array"></vui-picker>
 </template>
 
 <script>
@@ -690,8 +684,6 @@ export default {
 </script>
 ```
 
-
-
 | 参数            | 说明           | 类型           | 可选值                 | 默认值    |
 | --------------- | -------------- | -------------- | ---------------------- | --------- |
 | options         | 选项列表       | array          | -                      | -         |
@@ -723,8 +715,6 @@ export default {
 | cancel   | 点击取消时触发 | [待确认] |
 | confirm  | 点击确认时触发 | [待确认] |
 
-
-
 ## vui-scroll
 
 ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置。
@@ -734,9 +724,9 @@ ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置�
 ```vue
 <vui-scroll>
 	<div>
-        假装有很多内容！
-        内容高度必须超过容器高度才能滚动喔！
-    </div>
+    假装有很多内容！
+    内容高度必须超过容器高度才能滚动喔！
+  </div>
 </vui-scroll>
 ```
 
@@ -932,9 +922,6 @@ this.$success('保存成功！');
 this.$warning('修改配置，将会重启，请知悉。');
 ```
 
-### 
-
-
 
 ### $loading(message | options)
 
@@ -949,7 +936,6 @@ this.$loading({
 });
 ```
 
-### 
 
 **手动消失：**
 
@@ -960,7 +946,6 @@ setTimeout(() => {
 }, 5000);
 ```
 
-### 
 
 #### 参数
 
@@ -1075,7 +1060,7 @@ this.$confirm("确定要删除嘛？")
 
 #### 参数
 
-**title: ** *string*
+**title:**  *string*
 
 alert对话框显示的内容。必填。
 
@@ -1102,7 +1087,7 @@ alert对话框按钮的文本信息，默认为`确定`。非必填。
 
 #### 参数
 
-**title: ** *string*
+**title:** *string*
 
 confirm对话框标题。必填。
 

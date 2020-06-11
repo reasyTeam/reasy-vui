@@ -1,11 +1,5 @@
 <template>
-  <div
-    :class="[
-      'vui-tab-wrapper',
-      { 'border-bottom': type === 'link', disabled: isDisabled }
-    ]"
-    ref="wrapper"
-  >
+  <div :class="['vui-tab-wrapper', { 'border-bottom': type === 'link', disabled: isDisabled }]" ref="wrapper">
     <nav v-if="type === 'button'" class="vui-tab vui-tab-buttons">
       <a
         :class="[
@@ -65,6 +59,7 @@
 
 <script>
 export default {
+  name: "vui-tab",
   props: {
     type: {
       type: String,
@@ -148,10 +143,7 @@ export default {
           this.value2Text[key] = value;
         }
       }
-      if (
-        this.active === undefined ||
-        this.value2Text[this.active] === undefined
-      ) {
+      if (this.active === undefined || this.value2Text[this.active] === undefined) {
         /* eslint-disable */
         this.active = res[0]["value"];
       }
@@ -181,9 +173,7 @@ export default {
       this.$refs["nav"].children.forEach(node => {
         if (node.tagName === "A") {
           innerWidth += node.clientWidth;
-          locate[node.getAttribute("vui-value")] = Math.floor(
-            node.offsetLeft + node.clientWidth / 2
-          );
+          locate[node.getAttribute("vui-value")] = Math.floor(node.offsetLeft + node.clientWidth / 2);
         }
       });
 
