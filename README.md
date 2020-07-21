@@ -21,7 +21,7 @@ Vue.use(ReasyVui);
 ### 按需引用
 
 1. 安装 [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) 插件
-2. `.babelrc`配置
+2. `.babelrc`或`babel.config.js`文件配置
 ```js
 plugins: [
   [
