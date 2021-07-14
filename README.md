@@ -1,6 +1,6 @@
 # reasy-vui
 
-移动端 UI 组件库。[在线示例](https://reasyteam.github.io/reasy-vui/)
+移动端 UI 组件库。[在线示例](https://reasyteam.github.io/Reasy-ui-mobile/#/)
 
 
 ## 使用
